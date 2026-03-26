@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌎 Travel Places Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Travel Directory ✈️</h1>
+        <nav>
+            <a href="#places-section" onclick="showGallery()">Places</a>
+            <a href="javascript:void(0)" onclick="toggleWishlist()">Wishlist (<span id="wishlist-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for a place..." onkeyup="filterPlaces()">
+        </section>
+
+        <section id="places-section" class="places-gallery">
+            </section>
+
+        <section id="detail-view" class="detail-container hidden">
+            
+            <article id="selected-place-detail" class="place-detail">
+                </article>
+            
+            <aside id="related-places-sidebar" class="related-sidebar">
+                <h3 class="sidebar-title">More Destinations</h3>
+                <div id="related-places-list" class="related-list">
+                    </div>
+            </aside>
+            
+        </section>
+        
+    </main>
+
+    <div id="wishlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleWishlist()">&times;</span>
+            <h2>💖 Your Wishlist</h2>
+            <div id="wishlist-container" class="places-gallery">
+                <p id="empty-wishlist-message" style="text-align: center;">Your wishlist is empty!</p>
+            </div>
+            <button class="clear-btn" onclick="clearWishlist()">Clear Wishlist</button>
+        </div>
+    </div>
+
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <img id="modalImage" class="modal-image" src="" alt="Full View">
+        <span class="image-close">&times;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

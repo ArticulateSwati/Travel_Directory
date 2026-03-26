@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Eiffel Tower",
+        "image": "https://media.architecturaldigest.com/photos/66a951edce728792a48166e6/16:9/w_1920,c_limit/GettyImages-955441104.jpg",
+        "description": "The iconic wrought-iron lattice tower on the Champ de Mars in Paris, France."
+    },
+    {
+        "id": 2,
+        "name": "Great Wall of China",
+        "image": "https://whc.unesco.org/uploads/thumbs/site_0438_0035-400-400-20251104110355.webp",
+        "description": "A series of fortifications built across the historical northern borders of China, spanning thousands of miles."
+    },
+    {
+        "id": 3,
+        "name": "Machu Picchu",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQzJqLAn29h0J7IacWzqV-bXGEpU-jIu4kQ&s",
+        "description": "An ancient 15th-century Incan citadel set high in the Andes Mountains in Peru, famous for its dry-stone walls."
+    },
+    {
+        "id": 4,
+        "name": "Taj Mahal",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM6RtkJt6Cd3FjTw6pBisKbNvbarIH43Vw2w&s",
+        "description": "An ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra, commissioned in 1632."
+    },
+    {
+        "id": 5,
+        "name": "The Colosseum",
+        "image": "https://cdn-imgix.headout.com/microbrands-content-image/image/005b35a598b659882b439205d16f90d3-Colosseum%20in%20Use.jpg?auto=format&w=1069.6000000000001&h=687.6&q=90&ar=14%3A9&crop=faces&fit=crop",
+        "description": "The largest ancient amphitheatre ever built, located in the centre of the city of Rome, Italy."
+    },
+    {
+        "id": 6,
+        "name": "Pyramids of Giza",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFWQJGfWF7NV_pJgljlIzx54ktQOf0QDMTA&s",
+        "description": "The complex includes the Great Pyramid of Giza, the Pyramid of Khafre, and the Pyramid of Menkaure, bordering Giza in Greater Cairo."
+    },
+    {
+        "id": 7,
+        "name": "Statue of Liberty",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_viCV6mHdA0LT9_npUCsg5S42uUdSUHklnQ&s",
+        "description": "A colossal neoclassical sculpture on Liberty Island in New York Harbor, USA, a symbol of freedom and democracy."
+    },
+    {
+        "id": 8,
+        "name": "Bora Bora",
+        "image": "https://images.trvl-media.com/lodging/1000000/560000/558800/558749/37620ff7.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+        "description": "A small South Pacific island northwest of Tahiti, known for its stunning turquoise lagoons and overwater bungalows."
+    },
+    {
+        "id": 9,
+        "name": "Petra",
+        "image": "https://i.natgeofe.com/n/5ba0cd81-b859-40a0-93f1-2d26ff6d5ef9/DHHXC2.jpg",
+        "description": "A famous archaeological site in Jordan, known for its rock-cut architecture, particularly The Treasury (Al-Khazneh)."
+    },
+    {
+        "id": 10,
+        "name": "Acropolis of Athens",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzWWZchvZKC1vIG1AJNBE5emM79Zs5xDDLA&s",
+        "description": "An ancient citadel located on a rocky outcrop above Athens, home to the Parthenon, dedicated to the goddess Athena."
+    },
+    {
+        "id": 11,
+        "name": "Angkor Wat",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ei1b1PC0KxdBKQ3ILFspUtizCQVc9NvWZw&s",
+        "description": "A temple complex in Cambodia and the largest religious monument in the world, originally Hindu, then Buddhist."
+    },
+    {
+        "id": 12,
+        "name": "Rio de Janeiro (Christ the Redeemer)",
+        "image": "https://study.com/cimages/multimages/16/christ-the-redeemer-1-cristo-redentor-corcovado-mountain-rio-de-janeiro-20073481671552423387843.jpg",
+        "description": "A 30-meter Art Deco statue of Jesus Christ on top of Corcovado mountain, overlooking Rio de Janeiro."
+    },
+    {
+        "id": 13,
+        "name": "Sydney Opera House",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsT8nI1D-kwg9szg31Ge6HHn5uGbNjzyWb0Q&s",
+        "description": "A multi-venue performing arts centre in Sydney, Australia, defined by its iconic 'sail' structures."
+    },
+    {
+        "id": 14,
+        "name": "The Alps",
+        "image": "https://www.wildernesstravel.com/wp-content/uploads/2024/12/alps-grou-hiking-trip-reflection-lake-france-1680x826.jpg",
+        "description": "The highest and most extensive mountain range system in Europe, famous for mountaineering and picturesque valleys."
+    },
+    {
+        "id": 15,
+        "name": "Kyoto (Fushimi Inari-taisha)",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6JDtZh3TILxcrLjJQ7juAC_ygiVo46rvXw&s",
+        "description": "Known for the thousands of vibrant red torii gates that wind through the forest up the mountain, dedicated to the Shinto rice god Inari."
+    },
+    {
+        "id": 16,
+        "name": "Victoria Falls",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIUEdDNgBPi4-hYVRyaqd3-KHaOJVsW_Asyg&s",
+        "description": "Locally known as Mosi-oa-Tunya ('The Smoke that Thunders'), it's a massive waterfall on the Zambezi River."
+    },
+    {
+        "id": 17,
+        "name": "Rajgir",
+        "image": "https://www.trvme.com/img/destinations/5772922-Rajgir-destination3.jpg",
+        "description": "Rajgir is an ancient city in the northeast Indian state of Bihar. Surrounded by hills, it was the first capital of the Magadha kingdom."
+    },
+    {
+        "id": 18,
+        "name": "Patratu Valley",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-kgsPuxaQIiEH5CNO1vytV8b5Qh0ef0_vSg&s",
+        "description": "A stunning valley and dam area in Jharkhand, India, popular for its winding ghat road with panoramic views."
+    },
+    {
+        "id": 19,
+        "name": "Santorini",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqGg5kO0p4HjE7vJ5V1_s1B0q4F_g9W9K2YQ&s",
+        "description": "A volcanic Greek island famous for its white-washed villages, blue-domed churches, and spectacular sunsets over the Aegean Sea."
+    },
+    {
+        "id": 20,
+        "name": "Halong Bay",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhX5RjX1P8g-J7L4dF8t9Uq2I4l0v4G5m8yA&s",
+        "description": "A UNESCO World Heritage Site in Vietnam, known for its thousands of towering limestone islands and calm waters."
+    }
+]

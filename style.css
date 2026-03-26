@@ -1,0 +1,392 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: var(--card-background);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 1.8em;
+}
+
+.header a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.header a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Search Section --- */
+.search-section {
+    padding: 30px 0;
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* --- Places Gallery Layout --- */
+.places-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* --- Place Card Styles --- */
+.place-card {
+    background: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    transition: color 0.3s, background 0.3s;
+    z-index: 5;
+}
+
+.wishlist-btn.active {
+    color: #dc3545;
+}
+
+/* --- Detail View Styles --- */
+.detail-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Left Detail Content (70%) - Height determined by content */
+.place-detail {
+    width: 70%; 
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    position: relative; 
+    /* The height of this element determines the overall height of the flex container */
+}
+
+/* Back Button Style */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-top: 50px; /* Space for the absolute positioned back button */
+}
+
+.detail-image-link {
+    display: block;
+    cursor: pointer;
+}
+
+.detail-image {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer; 
+}
+
+/* Right Sidebar (30%) - LIMITED HEIGHT AND SCROLLABLE */
+.related-sidebar {
+    width: 30%; 
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    overflow: hidden; 
+    
+    /* CRITICAL: Defines a fixed minimum height (75% of viewport height) */
+    min-height: 75vh; 
+    /* Allows it to match the height of the left column (place-detail) if that column is short, 
+       but the overflow logic below handles the scrolling when content is long. */
+    height: auto; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--background-color);
+    padding-bottom: 5px;
+}
+
+.related-list {
+    /* CRITICAL: Enables scrolling ONLY within this list if content exceeds the sidebar height */
+    overflow-y: auto; 
+    /* Ensures this container takes up all available height in the flex parent */
+    flex-grow: 1; 
+    padding-right: 5px; 
+}
+
+/* Style for small related place cards */
+.related-place-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; 
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--background-color);
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 120px; 
+}
+
+.related-place-card img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* --- Wishlist and Image Modal Styles --- */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 5% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-btn:hover {
+    background-color: #c82333;
+}
+
+/* Full-Screen Image Modal */
+.image-modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.6); 
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+.image-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 5px 15px;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 800px) {
+    .detail-container {
+        flex-direction: column;
+    }
+
+    .related-sidebar,
+    .place-detail {
+        width: 100%;
+        height: auto;
+    }
+    
+    .detail-header {
+        padding-top: 0; 
+    }
+    
+    .back-btn {
+        position: static; 
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    /* On mobile, limit height so user can scroll sidebar content vertically */
+    .related-sidebar {
+        max-height: 300px; /* Limited height on smaller screens */
+    }
+
+    .detail-image {
+        height: 300px;
+    }
+    
+    .related-place-card {
+        height: 100px; 
+    }
+    .related-place-card img {
+        width: 80px; 
+        height: 80px; 
+        margin-right: 10px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
