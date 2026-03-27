@@ -9,11 +9,20 @@ A sophisticated, responsive web application designed for exploring global landma
 ### 🖼️ UI/UX Design & Gallery
 * **Main Gallery View:** A clean, grid-based layout using CSS Flexbox and Grid for optimal spacing.
 * **70/30 Detail View:** A professional split-screen experience where the destination's rich content occupies 70% of the screen, while a scrollable "More Destinations" sidebar occupies the remaining 30%.
-* **Visual Previews:**
-    | Main Gallery | Detail View (70/30 Split) |
-    | :--- | :--- |
-    | ![Main Gallery](./screenshots/gallery.png) | ![Detail View](./screenshots/detail.png) |
-    *(Note: Upload your screenshots to a 'screenshots' folder in your repo to see them here!)*
+
+    
+   
+ ## Main Gallery 
+ 
+ ![Main Gallery](./Screenshot/MainGallery.png) 
+ 
+## Detail View
+
+![Detail View](./Screenshot/DetailView.png) 
+ 
+## Wishlist 
+
+![Wish list](./Screenshot/Wishlist.png) 
 
 ### 🛠️ Functionality
 * **🔍 Real-time Search:** Filter destinations instantly by name or description.
